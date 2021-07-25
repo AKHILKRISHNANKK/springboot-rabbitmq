@@ -11,7 +11,7 @@ public class User {
 	
 	@RabbitListener(queues = RabbitMQConstants.queue)
 	public void consumeMessageFromQueue(OrderStatus orderStatus) {
-		System.out.println("Message recieved from queue : " + orderStatus.getMessage()+""+orderStatus.getStatus());
+		System.out.println("Message recieved from queue : "+orderStatus.getOrder()+""+orderStatus.getStatus());
 	}
 
 }
